@@ -1,0 +1,13 @@
+{
+  "ownerID": "185975071603556352",
+  "token": "MzQ4MzI2NTkwMjYzODUzMDU3.DIVxzQ.AslFy62OrLM2ClRpYKQkSjZh0mc",
+  "defaultSettings" : {
+    "prefix": "i.",
+    "modLogChannel": "mod-log",
+    "modRole": "Owner",
+    "adminRole": "Mod",
+    "welcomeMessage": "Say hello to {{user}}!",
+    "welcomeEnabled": "false",
+    "welcomeChannel": "bots"
+  }
+}
