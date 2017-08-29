@@ -5,7 +5,7 @@ exports.run = (client, message, args, level) => {
     const commandNames = myCommands.keyArray();
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
     let currentCategory = "";
-    let output = `= Command List =\n\n[Use ${settings.prefix}help [commandname] for details]\n`;
+    let output = `= Commands =\n\n[Do ${settings.prefix}help [commandname] for details]\n`;
     const sorted = myCommands.sort((p, c) => p.help.category > c.help.category ? 1 : -1);
     sorted.forEach( c => {
       const cat = c.help.category.toProperCase();
@@ -21,7 +21,7 @@ exports.run = (client, message, args, level) => {
     if (client.commands.has(command)) {
       command = client.commands.get(command);
       if (level < command.conf.permLevel) return;
-      message.channel.send(`= ${command.help.name} = \n${command.help.description}\nusage : ${command.help.usage}`, {code:"asciidoc"});
+      message.channel.send(`= ${command.help.name} = \nDescription : ${command.help.description}\nUsage       : ${command.help.usage}`, {code:"asciidoc"});
     }
   }
 };
