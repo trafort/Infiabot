@@ -4,10 +4,9 @@ const client = new Discord.Client();
 exports.run = async (client, message, args, level) => { 
     if(message.mentions.users.size < 1) {
         message.channel.sendEmbed(new Discord.RichEmbed()
-            .addField('Error!', `Please mention a user!`)
-            .setColor(0xff5454)
+            .setImage(message.author.avatarURL)
+            .setColor(0x5697ff)
         );
-        return;
     }
     if(message.mentions.users.size > 1) {
         message.channel.sendEmbed(new Discord.RichEmbed()
