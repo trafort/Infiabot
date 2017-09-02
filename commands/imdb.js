@@ -53,5 +53,6 @@ exports.run = async (client, message, args, level) => {
     name: "imdb",
     category: "Utility",
     description: "Searches for an show/movie on imdb and returns that info",
+    furtherDescription: "I search for an Movie/TV show on imdb and return the results in a nice embed",
     usage: "imbd [name]"
   };

@@ -43,5 +43,6 @@ exports.help = {
     name: "jail",
     category: "Image",
     description: "Jail someone!",
+    furtherDescription: "I put the mentioned person behind bars! If there is no mention I put you behind bars! >:D",
     usage: "jail [@user]"
 };

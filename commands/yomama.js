@@ -30,5 +30,6 @@ exports.help = {
     name: "yomama",
     category: "Fun",
     description: "Gets a random yomama joke",
+    description: "I return a random yomama joke from http://api.yomomma.info/",
     usage: "yomama"
 };

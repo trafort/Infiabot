@@ -22,9 +22,9 @@ exports.run = async (client, message, args, level) => {
 
     let num = parseInt(args[1])
     num -= 1
-    if(num > 9 || num < 0) {
+    if(num > 14 || num < 0) {
         message.channel.sendEmbed(new Discord.RichEmbed()
-            .addField('Error!', `The result number must be between 1 and 10`)
+            .addField('Error!', `The result number must be between 1 and 15`)
             .setColor(0xff5454)
         );
         return;
@@ -45,6 +45,7 @@ exports.conf = {
   exports.help = {
     name: 'gif',
     description: 'Returns An gif from giphy',
+    furtherDescription: "I'll fetch a gif from giphy using your search term and result number",
     usage: 'gif [search term] [search result]',
     category: 'Fun',
   };

@@ -21,5 +21,6 @@ exports.conf = {
     name: "reverse",
     category: "Fun",
     description: "Reverses the given string",
+    furtherDescription: "Reverses the string that you input!",
     usage: "reverse [string]"
   };

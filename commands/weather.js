@@ -44,5 +44,6 @@ exports.run = async (client, message, args, level) => {
     name: "weather",
     category: "Utility",
     description: "Displays Weather for imputed location",
+    description: "I will display weather for an specified location! Just dont put in your exact adress!",
     usage: "weather [location]"
   };

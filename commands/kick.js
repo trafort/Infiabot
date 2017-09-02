@@ -43,5 +43,6 @@ exports.conf = {
     name: "kick",
     category: "Moderation",
     description: "Kicks the mentioned member",
+    furtherDescription: "I kick the mentioned member and log it in the modlog channel",
     usage: "kick [User]"
   };

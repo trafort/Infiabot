@@ -35,7 +35,7 @@ exports.run = async (client, message, args, level) => {// eslint-disable-line no
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ['r'],
   permLevel: 10
 };
 
@@ -43,5 +43,6 @@ exports.help = {
   name: "reload",
   category: "System",
   description: "Reloads a command",
+  furtherDescription: "Reloads an given command. Useful for development!",
   usage: "reload [command]"
 };

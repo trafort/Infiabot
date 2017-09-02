@@ -43,5 +43,6 @@ exports.run = async (client, message, args, level) => {
     name: "ban",
     category: "Moderation",
     description: "Bans the mentioned user",
+    furtherDescription: "I will kick and ban the mentioned user and log it to the modlog channel. Requires permlevel 3",
     usage: "ban [user]"
   };

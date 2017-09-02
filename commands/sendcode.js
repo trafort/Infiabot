@@ -39,5 +39,6 @@ exports.run = async (client, message, args) => {
     name: "sendcode",
     category: "System",
     description: "Sends the code of the command",
+    furtherDescription: "I send the code of an command so I can show people how spgetti my code is!",
     usage: "sendcode [command]"
   };

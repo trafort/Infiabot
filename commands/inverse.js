@@ -35,5 +35,6 @@ exports.help = {
     name: "inverse",
     category: "Image",
     description: "Inverses a person's avatar",
+    furtherDescription: "I inverse the mentioned person's avatar! If no mention is provided, I'll inverse your avatar.",
     usage: "inverse [@user]"
 };

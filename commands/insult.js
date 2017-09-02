@@ -27,5 +27,6 @@ exports.help = {
     name: "insult",
     category: "Fun",
     description: "Insults the person >:D",
+    furtherDescription: "I insult the mentioned person >:D",
     usage: "insult [person]"
 };

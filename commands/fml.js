@@ -33,6 +33,7 @@ exports.conf = {
 exports.help = {
   name: 'fml',
   description: 'Grabs a random "fml" story.',
+  furtherDescription: "I'll fetch a fml story from fmylife.com and display it in a nice embed!",
   usage: 'fml',
   category: 'Fun',
 };

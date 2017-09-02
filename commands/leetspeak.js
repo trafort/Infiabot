@@ -22,5 +22,6 @@ exports.help = {
     name: "leetspeak",
     category: "Fun",
     description: "c0nv3r75 y0ur 73x7 70 l3375p3@k",
+    furtherDescription: "I convert your message into leetspeak!",
     usage: "leetspeak [text]"
 };

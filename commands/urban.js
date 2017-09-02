@@ -30,6 +30,7 @@ exports.conf = {
   exports.help = {
     name: 'urban',
     description: 'Searches urban dictionary for an word and returns the info',
+    furtherDescription: "I search for the word on urban dictionary and return what the internet think some words mean",
     usage: 'urban [word]',
     category: 'Fun',
   };

@@ -14,5 +14,6 @@ exports.conf = {
     name: "say",
     category: "Fun",
     description: "I say whatever you want me to!",
+    furtherDescription: "I repeat whtever you want me to say!",
     usage: "say [msg]"
   };

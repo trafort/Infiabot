@@ -69,5 +69,6 @@ exports.help = {
   name: "set",
   category: "System",
   description: "View or change settings for your server.",
+  furtherDescription: "I set the settings for this server! Requires perm level 3",
   usage: "set [view/get/edit] [key] [value]"
 };

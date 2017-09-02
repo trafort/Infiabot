@@ -28,5 +28,6 @@ exports.help = {
   name: "eval",
   category: "System",
   description: "Evaluates arbitrary javascript.",
+  furtherDescription: "I'll evaluate basic javascript and discord.js stuff",
   usage: "eval [code]"
 };

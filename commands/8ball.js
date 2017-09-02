@@ -36,5 +36,6 @@ exports.help = {
     name: "8ball",
     category: "Fun",
     description: "Ask the magical 8ball any question...",
+    furtherDescription: "Ask the 8ball any question an it'll answer it. Never doubt the 8ball",
     usage: "8ball [question]"
 };

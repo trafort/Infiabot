@@ -39,5 +39,6 @@ exports.help = {
     name: "triggered",
     category: "Image",
     description: "Trigger someone!",
+    furtherDescription: "I trigger-memify someone's avatar! If no mention is provided, I'll trigger-memify you!",
     usage: "triggered [@user]"
 };

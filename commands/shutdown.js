@@ -23,6 +23,7 @@ exports.run = async (client, message, args, level) => {
   exports.help = {
     name: 'shutdown',
     description: 'This shuts down the bot.',
+    furtherDescription: "Noooooo don't kill me D:",
     usage: 'shutdown',
     category: 'System',
   };

@@ -20,5 +20,6 @@ exports.help = {
   name: "asktrump",
   category: "Fun",
   description: "Ask trump an question!",
+  furtherDescription: "Ask trump anything and he will respond!",
   usage: "asktrump [question]"
 };

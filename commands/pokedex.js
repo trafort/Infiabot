@@ -56,5 +56,6 @@ exports.help = {
   name: "pokedex",
   category: "Fun",
   description: "Returns info about a pokemon",
+  furtherDescription: "I return info for the pokemon that you enter in a nice embed",
   usage: "pokedex [pokemon/id]"
 };

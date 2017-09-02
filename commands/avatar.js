@@ -32,6 +32,7 @@ exports.conf = {
   exports.help = {
     name: 'avatar',
     description: 'Returns the person\'s avatar',
+    furtherDescription: "Mention An user and I will return his/her avatar. If you don't mention anyone I'll give you your avatar instead",
     usage: 'avatar [mention]',
     category: 'Miscelaneous',
   };

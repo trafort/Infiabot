@@ -50,12 +50,13 @@ exports.run = async (client, message, args, level) => {
     enabled: true,
     guildOnly: true,
     aliases: ['p'],
-    permLevel: 0
+    permLevel: 3
   };
   
   exports.help = {
     name: "announce",
     category: "Utility",
     description: "Announces to the announcement channel",
+    furtherDescription: "Announces an announcement as an embed in the announcement channel. Requires perm level 3",
     usage: "announce [title] | [content] | [#color]"
   };

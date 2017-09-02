@@ -25,5 +25,6 @@ exports.conf = {
     name: "haste",
     category: "Utility",
     description: "Posts code to Hastebin",
+    furtherDescription: "I'll post your code to hastebin with your file type!",
     usage: "hastebin [language] [code]"
   };

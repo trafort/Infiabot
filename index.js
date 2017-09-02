@@ -1,16 +1,14 @@
 if (process.version.slice(1).split(".")[0] < 8) throw new Error("Node 8.0.0 or higher is required. Update Node on your system.");
 
-
 const Discord = require("discord.js");
 
 const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
 const PersistentCollection = require("djs-collection-persistent");
 
-class GuideBot extends Discord.Client {
+class InfiniBot extends Discord.Client {
   constructor(options) {
     super(options);
-
 
     this.config = require("./config.json");
 
@@ -21,7 +19,7 @@ class GuideBot extends Discord.Client {
   }
 }
 
-const client = new GuideBot();
+const client = new InfiniBot();
 
 require("./modules/functions.js")(client);
 

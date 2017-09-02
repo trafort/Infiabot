@@ -26,5 +26,6 @@ exports.help = {
     name: "cat",
     category: "Fun",
     description: "Returns a random cat!",
+    furtherDescription: "I'll return a random cat from http://random.cat/meow",
     usage: "cat"
 };

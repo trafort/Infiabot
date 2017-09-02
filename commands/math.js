@@ -43,5 +43,6 @@ exports.conf = {
     name: "math",
     category: "Utility",
     description: "Solves a simple maths equation",
+    furtherDescription: "I solve any simple maths equasion!",
     usage: "maths [expression]"
   };

@@ -22,5 +22,6 @@ exports.help = {
     name: "yesorno",
     category: "Fun",
     description: "Returns a gif that displays yes or no",
+    description: "I return a gif that displays yes or no",
     usage: "yesorno"
 };

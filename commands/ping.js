@@ -20,5 +20,6 @@ exports.help = {
   name: "ping",
   category: "Miscelaneous",
   description: "Pong! Checks delay time.",
+  furtherDescription: "pONG! Useful for checking delay time and seeing if the bot is dead.",
   usage: "ping"
 };

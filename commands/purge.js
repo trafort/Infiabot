@@ -62,5 +62,6 @@ exports.help = {
     name: "purge",
     category: "Moderation",
     description: "Deletes the given ammount of messages",
+    furtherDescription: "I delete the given amount of messages and log it to the modlog channel",
     usage: "purge [amount]"
 };

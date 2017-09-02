@@ -46,5 +46,6 @@ exports.help = {
     name: "wasted",
     category: "Image",
     description: "Wasted...",
+    furtherDescription: "I put wasted over someone's avatar! If no mention is provided, I'll wasted-ify you!",
     usage: "wasted [@user]"
 };

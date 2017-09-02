@@ -4,7 +4,7 @@ module.exports = (client, member) => {
 
   const settings = client.settings.get(member.guild.id);
 
-  if (!settings.welcomeEnabled === "true") return;
+  if (settings.welcomeEnabled === "false") return;
 
   const welcomeMessage = settings.welcomeMessage.replace("{{user}}", member.user.tag);
 

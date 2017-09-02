@@ -16,5 +16,6 @@ exports.help = {
   name: "mylevel",
   category: "Miscelaneous",
   description: "Tells you your permission level for the current guild.",
+  dfurtherDescription: "I show what you're current permission level is!.",
   usage: "mylevel"
 };
