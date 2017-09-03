@@ -12,7 +12,8 @@ exports.run = (client, message, args, level) => {
     'Miscelaneous',
     'Moderation',
     'System',
-    'Utility'
+    'Utility',
+    'Music'
   ]
   let categoriesDesc = [
     'Bored? Here are a few fun commands for you to play with!',
@@ -20,7 +21,8 @@ exports.run = (client, message, args, level) => {
     'Miscelaneous Commands',
     'Commands to help you moderate the server',
     'System Commands',
-    'Utility Commands'
+    'Utility Commands',
+    'Wanna listen to music with your friends? Use these commands!'
   ]
   let emojiNum = 0;
   let emoji;
@@ -80,7 +82,10 @@ exports.run = (client, message, args, level) => {
         .setColor(0x5697ff)
       );
     } else {
-
+      message.channel.sendEmbed(new Discord.RichEmbed()
+        .addField('Error!', `\`${command}\` does not seem to be a valid command`)
+        .setColor(0xff5454)
+      );
     }
   }
 };
@@ -88,7 +93,7 @@ exports.run = (client, message, args, level) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["h", "halp", "?"],
+    aliases: ["h", "halp", "?", "send-help"],
     permLevel: 0
 };
 

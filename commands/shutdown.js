@@ -16,7 +16,7 @@ exports.run = async (client, message, args, level) => {
   exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['restart'],
+    aliases: ['restart', 'kys'],
     permLevel: 10
   };
   

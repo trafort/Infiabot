@@ -39,13 +39,14 @@ exports.run = async (client, message, args, level) => {
           .setColor(0xff5454)
         );
       } else {
-        //message.guild.ban(mention)
+        message.guild.ban(mention)
+        message.guild.unban(mention)
         message.channel.sendEmbed(new Discord.RichEmbed()
-          .addField('Success!', `${mention.user.tag} has been banned!`)
+          .addField('Success!', `${mention.user.tag} has been softbanned!`)
           .setColor(0x5697ff)
         );
         modlog.sendEmbed(new Discord.RichEmbed()
-          .setAuthor('Mod-log entry | Ban', message.author.avatarURL)
+          .setAuthor('Mod-log entry | SoftBan', message.author.avatarURL)
           .setThumbnail(mention.user.avatarURL)
           .addField('User:', `${mention.user.tag}`, true)
           .addField('Moderator:', `${message.author.tag}`, true)
@@ -54,7 +55,7 @@ exports.run = async (client, message, args, level) => {
           .setFooter(`User ID: ${mention.user.id}`)
           .setColor(0xff2a16)
         );
-        mention.send(`You have been banned in the server ${mention.guild.name} by moderator ${message.author.tag} for reason:\n${reason}`)
+        mention.send(`You have been softbanned in the server ${mention.guild.name} by moderator ${message.author.tag} for reason:\n${reason}`)
       }
     }
   }
@@ -64,13 +65,13 @@ exports.run = async (client, message, args, level) => {
     enabled: true,
     guildOnly: false,
     aliases: [],
-    permLevel: 3
+    permLevel: 2
   };
   
   exports.help = {
-    name: "ban",
+    name: "softban",
     category: "Moderation",
-    description: "Bans the mentioned user",
-    furtherDescription: "I will kick and ban the mentioned user and log it to the modlog channel. Requires permlevel 3",
-    usage: "ban [user] [reason]"
+    description: "Softbans the mentioned user",
+    furtherDescription: "I will kick and ban the mentioned user, then instantly unban them, and log it to the modlog channel. Requires permlevel 2",
+    usage: "softban [user] [reason]"
   };
