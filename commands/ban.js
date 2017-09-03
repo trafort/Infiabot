@@ -39,7 +39,7 @@ exports.run = async (client, message, args, level) => {
           .setColor(0xff5454)
         );
       } else {
-        //message.guild.ban(mention)
+        message.guild.ban(mention)
         message.channel.sendEmbed(new Discord.RichEmbed()
           .addField('Success!', `${mention.user.tag} has been banned!`)
           .setColor(0x5697ff)

@@ -57,3 +57,7 @@ const init = async () => {
 };
 
 init();
+
+process.on('unhandledRejection', error => {
+  console.error(`Uncaught Promise Error: \n${error.stack}`);
+});

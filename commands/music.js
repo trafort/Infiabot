@@ -100,8 +100,8 @@ exports.run = async (client, message, args, level) => {
             }
             break;
         case 'queue':
-            var stuff = '```'
-                for(var i = 0; i < guilds[message.guild.id].queueNames.length; i++) {
+            var stuff = '```\n(Currently Broken)\n'
+                for(i in guilds[message.guild.id].queueNames) {
                     var temp = (i + 1) + ': ' + guilds[message.guild.id].queueNames[i] + (i === 0 ? " (Current Song)" : '') + "\n"
                     if((stuff + temp).length <= 2000 - 3) {
                         stuff += temp
@@ -115,6 +115,9 @@ exports.run = async (client, message, args, level) => {
                 message.channel.send(stuff)
             break;
         case 'end':
+            guilds[message.guild.id].queue = [] 
+            guilds[message.guild.id].queueName = []
+            guilds[message.guild.id].isPlaying = false;
             guilds[message.guild.id].dispatcher.end()
             if(message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
             break;
@@ -216,6 +219,6 @@ exports.help = {
     name: "music",
     category: "Music",
     description: "I play music for you! Note: I have subcommands! Do i.help music to see them!",
-    furtherDescription: "I play whatever music you would like me to play in a voice channel!",
+    furtherDescription: "I play whatever music you would like me to play in a voice channel!\n```Subcommands:\ni.music play [url/search_term]\ni.music skip\ni.music queue\ni.music stop```",
     usage: "music [play/queue/skip/end]"
 };
