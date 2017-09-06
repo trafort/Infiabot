@@ -6,7 +6,7 @@ require("moment-duration-format");
 exports.run = async (client, message, args, level) => { 
     let guild = message.guild;
     let members = guild.members;
-    let roles = guild.roles;
+    //let roles = guild.roles;
     let onlineMembers = 0;
     let rolesPrint = '';
     //const duration = moment.duration(guild.created).format(" D [days], H [hrs], m [mins], s [secs], ms [ms]");
@@ -16,9 +16,19 @@ exports.run = async (client, message, args, level) => {
         }
     });
 
-    roles.forEach(r => {
-        rolesPrint += `${r.name}, `;
-    })
+    //roles.forEach(r => {
+    //    rolesPrint += `${r.name}, `;
+    //})
+
+    roles = message.guild.roles.map(r => r.name).slice(1, -1)
+
+    for(i in roles) {
+        if(i === roles.length) {
+            rolesPrint += `${roles[i]}.`
+        } else {
+            rolesPrint += `${roles[i]}, `
+        }
+    }
 
     message.channel.sendEmbed(new Discord.RichEmbed()
         .setAuthor(`${guild.name}`, guild.iconURL)

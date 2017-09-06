@@ -30,6 +30,7 @@
     "moment": "^2.18.1",
     "moment-duration-format": "^1.3.0",
     "name-to-imdb": "^1.6.0",
+    "node-dogstatsd": "0.0.6",
     "opusscript": "0.0.3",
     "pokedex-promise-v2": "^3.0.3",
     "process": "^0.11.10",

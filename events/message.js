@@ -3,17 +3,13 @@ module.exports = (client, message) => {
 
   if (message.author.bot) return;
 
-  //client.emit("guildDelete", message.guild.member(message.author).guild);
-
   const settings = message.guild
     ? client.settings.get(message.guild.id)
     : client.config.defaultSettings;
 
-
   message.settings = settings;
 
   if (message.content.indexOf(settings.prefix) !== 0) return;
-
 
   const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
@@ -46,7 +42,8 @@ module.exports = (client, message) => {
     )
     cmd.run(client, message, args, level);
   } else {
-    message.author.send(`**[CMD]** Sorry, But you do not have the right permissions to run that. This command requires permission level **${cmd.conf.permLevel}** and you are permission level **${level}**.`)
+    message.author.send(`**[CMD]** Sorry, But you do not have the right permissions to run **[${cmd.help.name.toProperCase()}]**. This command requires permission level **${cmd.conf.permLevel}** and you are permission level **${level}**.`)
+    let log = client.channels.get('353803211389403136')
     log.sendEmbed(new Discord.RichEmbed()
       .setAuthor(`Command-log entry | Command Run | ${cmd.help.name.toProperCase()}`, message.author.avatarURL)
       .setThumbnail(message.author.avatarURL)
