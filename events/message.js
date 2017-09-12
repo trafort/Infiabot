@@ -1,11 +1,10 @@
-
 module.exports = (client, message) => {
 
   if (message.author.bot) return;
 
-  const settings = message.guild
-    ? client.settings.get(message.guild.id)
-    : client.config.defaultSettings;
+  const settings = message.guild ?
+    client.settings.get(message.guild.id) :
+    client.settings.set(guild.id, client.config.defaultSettings);
 
   message.settings = settings;
 
@@ -19,7 +18,7 @@ module.exports = (client, message) => {
 
   const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command));
 
-  if(!cmd) return;
+  if (!cmd) return;
 
   if (cmd && !message.guild && cmd.conf.guildOnly)
     return message.channel.send("This command is unavailable via private message. Please run this command in a guild.");

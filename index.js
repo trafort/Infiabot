@@ -1,8 +1,3 @@
-var StatsD = require('node-dogstatsd').StatsD;
-var dogstatsd = new StatsD();
-
-dogstatsd.increment(1)
-
 if (process.version.slice(1).split(".")[0] < 8) throw new Error("Node 8.0.0 or higher is required. Update Node on your system.");
 
 const Discord = require("discord.js");
@@ -21,8 +16,12 @@ class InfiniBot extends Discord.Client {
     this.commands = new Discord.Collection();
     this.aliases = new Discord.Collection();
 
-    this.settings = new PersistentCollection({name: "settings"});
-    this.infinicoins = new PersistentCollection({name: "infinicoins"});
+    this.settings = new PersistentCollection({
+      name: "settings"
+    });
+    this.infinicoins = new PersistentCollection({
+      name: "infinicoins"
+    });
   }
 }
 
@@ -30,7 +29,7 @@ const client = new InfiniBot();
 
 require("./modules/functions.js")(client);
 
-const init = async () => {
+const init = async() => {
 
   const cmdFiles = await readdir("./commands/");
   client.log("log", `Loading a total of ${cmdFiles.length} commands.`);
